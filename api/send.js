@@ -17,7 +17,7 @@
     }
 
     const message =
-        `🌸 New Application from Sakura Website!\n\n` +
+        `🟢 New Application from iTeacher Website!\n\n` +
         `👤 Name: ${name}\n` +
         `📞 Phone: ${phone}\n` +
         `📚 Course: ${course}`;

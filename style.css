@@ -1009,6 +1009,7 @@ a{
 }
 .faq-item.open .faq-answer {
     padding: 0 24px 20px;
+    max-height: 500px;
 }
 .faq-answer p {
     color: #555;

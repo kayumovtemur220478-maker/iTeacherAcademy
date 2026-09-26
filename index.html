@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTeacherAcademy</title>
+    <meta name="description" content="Sakura Language School — курсы английского, корейского, китайского, японского, немецкого и русского языков в Андижане. 3 филиала. Запишитесь бесплатно!">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="img5.jpg" type="image/jpeg">
+    <meta name="theme-color" content="#e60000">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Sakura Language School, Sakura Andijon, Sakura Андижан, sakura til markazi, языковой центр Андижан, учебный центр Андижан, o'quv markaz Andijon, курсы английского Андижан, ingliz tili kurslari Andijon, IELTS Андижан, корейский язык Андижан, koreys tili Andijon, китайский язык Андижан, немецкий язык Андижан">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sakura Language School Andijan">
+    <meta property="og:description" content="Курсы английского, корейского, китайского в Андижане. 3 филиала.">
+    <meta property="og:url" content="https://sakura-temur4.vercel.app">
+    <meta property="og:image" content="https://sakura-temur4.vercel.app/img5.jpg">
+</head>
+<body>
+    <header class="site-header">
+    <a href="#" class="logo">
+        <img src="img5.jpg" alt="logo"> Sakura
+    </a>
+    <div class="lang-toggle">
+        <button class="lang-btn" data-lang="ru" onclick="setLang('ru', this)">RU</button>
+        <button class="lang-btn" data-lang="uz" onclick="setLang('uz', this)">UZ</button>
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en', this)">EN</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+   <nav class="nav-menu" id="nav-menu">
+    <a href="#hero-section" 
+       data-en="Home" data-ru="Главная" data-uz="Bosh sahifa">Home</a>
+    <a href="#courses-section" 
+       data-en="Courses" data-ru="Курсы" data-uz="Kurslar">Courses</a>
+    <a href="#advantages-section" 
+       data-en="Why Us" data-ru="О нас" data-uz="Biz haqimizda">Why Us</a>
+    <a href="#site-footer" 
+       data-en="Contacts" data-ru="Контакты" data-uz="Aloqa">Contacts</a>
+</nav>
+</header>
+<!-- ------------------------------------ -->
+  <section id="hero-section">
+    <div class="hero-info">
+        <h1 data-en="Achieve Your Goals Confidently with Sakura"
+            data-ru="Достигайте своих целей уверенно с Sakura"
+            data-uz="Sakura bilan maqsadlaringizga erishing">
+            Achieve Your Goals Confidently with Sakura
+        </h1>
+        <p data-en="Break barriers and build your future. Professional courses for languages, school preparation, and international exams."
+           data-ru="Сломайте барьеры и постройте своё будущее. Профессиональные курсы по языкам и международным экзаменам."
+           data-uz="To'siqlarni yengib kelajagingizni quring. Tillar va xalqaro imtihonlar bo'yicha professional kurslar.">
+            Break barriers and build your future. Professional courses for languages, school preparation, and international exams.
+        </p>
+        <a href="https://t.me/sakura_andijon?text=Hello!%20I%20want%20to%20book%20a%20free%20lesson." 
+           class="hero-btn" target="_blank" rel="noopener noreferrer">
+            <span class="online-dot"></span>
+            <span data-en="Book a Free Lesson"
+                  data-ru="Записаться бесплатно"
+                  data-uz="Bepul darsga yozilish">Book a Free Lesson</span>
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="pexels-tima-miroshnichenko-5427870.jpg" alt="Teacher">
+    </div>
+</section>
+<section id="stats-section">
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <i class="fa-solid fa-building stat-icon"></i>
+            <span class="stat-number">3</span>
+            <span class="stat-label"
+                  data-en="Branches" 
+                  data-ru="Филиала"
+                  data-uz="Filiallar">Branches</span>
+        </div>
+
+        <div class="stat-card">
+             <i class="fa-solid fa-language stat-icon"></i>
+            <span class="stat-number">6</span>
+            <span class="stat-label"
+                  data-en="Languages" 
+                  data-ru="Языков"
+                  data-uz="Tillar">Languages</span>
+        </div>
+
+        <div class="stat-card">
+             <i class="fa-solid fa-users stat-icon"></i>
+            <span class="stat-number">500+</span>
+            <span class="stat-label"
+                  data-en="Students"
+                  data-ru="Студентов"
+                  data-uz="Talabalar">Students</span>
+        </div>
+
+    </div>
+</section>
+<section id="languages-section">
+    <h2 data-en="Languages We Teach" 
+        data-ru="Языки, которым мы обучаем" 
+        data-uz="Biz oʻrgatadigan tillar">Languages We Teach</h2>
+        
+    <div class="lang-grid">
+    
+        <article class="lang-card">
+            <span>🇬🇧</span>
+            <h3 data-en="English" data-ru="Английский" data-uz="Ingliz tili">English</h3>
+            <p>IELTS · Multilevel</p>
+        </article>
+
+        <article class="lang-card">
+            <span>🇰🇷</span>
+            <h3 data-en="Korean" data-ru="Корейский" data-uz="Koreys tili">Korean</h3>
+            <p>TOPIK I & II</p>
+        </article>
+
+        <article class="lang-card">
+            <span>🇨🇳</span>
+            <h3 data-en="Chinese" data-ru="Китайский" data-uz="Xitoy tili">Chinese</h3>
+            <p>HSK I–VI</p>
+        </article> 
+
+        <article class="lang-card">
+            <span>🇷🇺</span>
+            <h3 data-en="Russian" data-ru="Русский" data-uz="Rus tili">Russian</h3>
+            <p data-en="Free Expression" data-ru="Разговорный курс" data-uz="Soʻzlashuv kursi">Free Expression</p>
+        </article>
+
+        <article class="lang-card">
+            <span>🇯🇵</span>  
+            <h3 data-en="Japanese" data-ru="Японский" data-uz="Yapon tili">Japanese</h3>
+            <p>JLPT</p>
+        </article>
+
+        <article class="lang-card">
+            <span>🇩🇪</span>
+            <h3 data-en="German" data-ru="Немецкий" data-uz="Nemis tili">German</h3>
+            <p>Goethe</p>
+        </article>
+    </div>
+</section>
+    <section id="courses-section">
+    <h2 class="section-title"
+        data-en="Our Study Programs"
+        data-ru="Наши программы обучения"
+        data-uz="Bizning taʼlim dasturlarimiz">Our Study Programs</h2>
+    
+    <div class="courses-grid">
+     
+        <article class="course-card">
+            <h3 data-en="🇬🇧 English" data-ru="🇬🇧 Английский" data-uz="🇬🇧 Ingliz tili">🇬🇧 English</h3>
+            <p class="course-desc"
+               data-en="IELTS, Multilevel — from beginner to advanced."
+               data-ru="IELTS, Multilevel — от начинающего до продвинутого уровня."
+               data-uz="IELTS, Multilevel — boshlangʻichdan yuqori darajagacha.">IELTS, Multilevel — from beginner to advanced.</p>
+            <div class="course-price">
+                <p>350 000 <span data-en="sum /month" data-ru="сум /мес." data-uz="soʻm /oy">sum /month</span></p>
+            </div>
+        </article>
+
+        <article class="course-card">
+            <h3 data-en="🇰🇷 Korean" data-ru="🇰🇷 Корейский" data-uz="🇰🇷 Koreys tili">🇰🇷 Korean</h3>
+            <p class="course-desc"
+               data-en="TOPIK I & II preparation with certified teachers."
+               data-ru="Подготовка к TOPIK I и II с сертифицированными преподавателями."
+               data-uz="Sertifikatlangan oʻqituvchilar bilan TOPIK I & II imtihonlariga tayyorlov.">TOPIK I & II preparation with certified teachers.</p>
+            <div class="course-price">
+                <p>350 000 <span data-en="sum /month" data-ru="сум /мес." data-uz="soʻm /oy">sum /month</span></p>
+            </div>
+        </article>
+
+        <article class="course-card">
+            <h3 data-en="🇨🇳 Chinese" data-ru="🇨🇳 Китайский" data-uz="🇨🇳 Xitoy tili">🇨🇳 Chinese</h3>
+            <p class="course-desc"
+               data-en="HSK I–VI levels, speaking and writing focus."
+               data-ru="Уровни HSK I–VI, упор на разговорную речь и письмо."
+               data-uz="HSK I–VI darajalari, soʻzlashuv va yozuvga urgʻu beriladi.">HSK I–VI levels, speaking and writing focus.</p>
+            <div class="course-price">
+                <p>350 000 <span data-en="sum /month" data-ru="сум /мес." data-uz="soʻm /oy">sum /month</span></p>
+            </div>
+        </article>
+
+        <article class="course-card">
+            <h3 data-en="🇷🇺 Russian" data-ru="🇷🇺 Русский" data-uz="🇷🇺 Rus tili">🇷🇺 Russian</h3>
+            <p class="course-desc"
+               data-en="Free expression course for fluent communication."
+               data-ru="Разговорный курс для свободного и уверенного общения."
+               data-uz="Erkin muloqot va ravon soʻzlashuv uchun nutq oʻstirish kursi.">Free expression course for fluent communication.</p>
+            <div class="course-price">
+                <p>350 000 <span data-en="sum /month" data-ru="сум /мес." data-uz="soʻm /oy">sum /month</span></p>
+            </div>
+        </article>
+
+        <article class="course-card">
+            <h3 data-en="🇯🇵 Japanese" data-ru="🇯🇵 Японский" data-uz="🇯🇵 Yapon tili">🇯🇵 Japanese</h3>
+            <p class="course-desc"
+               data-en="JLPT preparation — reading, writing and speaking."
+               data-ru="Подготовка к JLPT — чтение, письмо и разговорная речь."
+               data-uz="JLPT imtihoniga tayyorlov — oʻqish, yozish va soʻzlashuv.">JLPT preparation — reading, writing and speaking.</p>
+            <div class="course-price">
+                <p>350 000 <span data-en="sum /month" data-ru="сум /мес." data-uz="soʻm /oy">sum /month</span></p>
+            </div>
+        </article>
+
+        <article class="course-card">
+            <h3 data-en="🇩🇪 German" data-ru="🇩🇪 Немецкий" data-uz="🇩🇪 Nemis tili">🇩🇪 German</h3>
+            <p class="course-desc"
+               data-en="Goethe certificate preparation for all levels."
+               data-ru="Подготовка к сертификату Goethe для всех уровней."
+               data-uz="Barcha darajalar uchun Gyote (Goethe) sertifikatiga tayyorlov.">Goethe certificate preparation for all levels.</p>
+            <div class="course-price">
+                <p>350 000 <span data-en="sum /month" data-ru="сум /мес." data-uz="soʻm /oy">sum /month</span></p>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+<section class="advantages-section">
+    <h2 class="advantages-title"
+        data-en="Why Students Choose Us"
+        data-ru="Почему студенты выбирают нас"
+        data-uz="Nega talabalar bizni tanlashadi?">Why Students Choose Us</h2>
+    
+    <div class="advantages-grid">
+        
+        <article class="adv-card">
+            <div class="adv-icon"><img src="img2.jpg" loading="lazy" alt="Students read books"></div>
+            <h3 class="adv-title" 
+                data-en="Book Club📚" 
+                data-ru="Книжный клуб📚" 
+                data-uz="Kitobxonlar klubi📚">Book Club📚</h3>
+            <p class="adv-desc"
+               data-en="We read and discuss books in the language you're learning. A perfect way to boost your vocabulary and speak fluently!"
+data-ru="Читаем и обсуждаем книги на изучаемом вами языке. Идеальный способ прокачать словарный запас и заговорить свободно!"
+data-uz="O'rganayotgan tilingizda kitoblarni o'qiymiz va muhokama qilamiz. Lug'at boyligini oshirish va ravon gapirish uchun ajoyib usul!">We read and discuss books in the language you're learning. A perfect way to boost your vocabulary and speak fluently!</p>
+        </article>
+
+        <article class="adv-card">
+            <div class="adv-icon"><img src="img3.jpg" loading="lazy" alt="Students play chess"></div>
+            <h3 class="adv-title" 
+                data-en="Chess Nights♟️" 
+                data-ru="Шахматные вечера♟️" 
+                data-uz="Shaxmat kechalari♟️">Chess Nights♟️</h3>
+            <p class="adv-desc"
+     data-en="Play chess and discuss strategy with friends in any language you're learning. Train your mind and your speech!"
+data-ru="Играйте в шахматы и обсуждайте стратегию на изучаемом языке. Тренируйте разум и речь одновременно!"
+data-uz="Shaxmat o'ynang va o'rganayotgan tilingizda strategiyani muhokama qiling. Aqlni ham, nutqni ham rivojlantiring!">Play chess and discuss strategy with friends in any language you're learning. Train your mind and your speech!</p>
+        </article>
+
+        <article class="adv-card">
+            <div class="adv-icon"><img src="img4.jpg" loading="lazy" alt="Students speak in english"></div>
+            <h3 class="adv-title" 
+                data-en="80% Speaking🗣️" 
+                data-ru="80% Разговорной практики🗣️" 
+                data-uz="80% Soʻzlashuv amaliyoti🗣️">80% Speaking🗣️</h3>
+            <p class="adv-desc"
+               data-en="No boring grammar drilling from old textbooks. You start talking from the very first minute of the lesson."
+               data-ru="Никакой скучной зубрёжки грамматики по старым учебникам. Вы начинаете говорить с самой первой минуты урока!"
+               data-uz="Eski darsliklardan zerikarli grammatika yodlashlar yoʻq. Siz darsning birinchi daqiqasidanoq gapirishni boshlaysiz!">No boring grammar drilling from old textbooks. You start talking from the very first minute of the lesson.</p>
+        </article>
+
+    </div>
+</section>
+
+<section id="branches-section" class="branches-section">
+    <h2 data-en="Our Branches" 
+        data-ru="Наши филиалы" 
+        data-uz="Bizning filiallarimiz">Our Branches</h2>
+        
+    <div class="branches-grid">
+
+    <div class="branch-card">
+        <h3 data-en="A-Branch" 
+            data-ru="Филиал А" 
+            data-uz="A-filial">A-Branch</h3>
+        <p class="branch-address"
+           data-en="📍 Navoi str., 15, Andijan"
+           data-ru="📍 ул. Навоий, 15, Андижан"
+           data-uz="📍 Navoiy ko'ch., 15, Andijon">
+           📍 Navoi str., 15, Andijan
+        </p>
+        <p class="branch-hours"
+           data-en="🕐 Mon–Sat: 09:00–20:00"
+           data-ru="🕐 Пн–Сб: 09:00–20:00"
+           data-uz="🕐 Du–Shan: 09:00–20:00">
+           🕐 Mon–Sat: 09:00–20:00
+        </p>
+        <a href="https://maps.app.goo.gl/2JKQ2w2uFbFQKEyS7" 
+           target="_blank" rel="noopener noreferrer"
+           data-en="Open in Maps"
+           data-ru="Открыть на карте"
+           data-uz="Xaritada ochish">Open in Maps</a>
+    </div>
+
+    <div class="branch-card">
+        <h3 data-en="B-Branch" 
+            data-ru="Филиал Б" 
+            data-uz="B-filial">B-Branch</h3>
+        <p class="branch-address"
+           data-en="📍 Bobur str., 42, Andijan"
+           data-ru="📍 ул. Бобур, 42, Андижан"
+           data-uz="📍 Bobur ko'ch., 42, Andijon">
+           📍 Bobur str., 42, Andijan
+        </p>
+        <p class="branch-hours"
+           data-en="🕐 Mon–Sat: 09:00–20:00"
+           data-ru="🕐 Пн–Сб: 09:00–20:00"
+           data-uz="🕐 Du–Shan: 09:00–20:00">
+           🕐 Mon–Sat: 09:00–20:00
+        </p>
+        <a href="https://maps.app.goo.gl/2JKQ2w2uFbFQKEyS7" 
+           target="_blank" rel="noopener noreferrer"
+           data-en="Open in Maps"
+           data-ru="Открыть на карте"
+           data-uz="Xaritada ochish">Open in Maps</a>
+    </div>
+
+    <div class="branch-card">
+        <h3 data-en="X-Branch" 
+            data-ru="Филиал Х" 
+            data-uz="X-filial">X-Branch</h3>
+        <p class="branch-address"
+           data-en="📍 Istiqlol str., 7, Andijan"
+           data-ru="📍 ул. Истиқлол, 7, Андижан"
+           data-uz="📍 Istiqlol ko'ch., 7, Andijon">
+           📍 Istiqlol str., 7, Andijan
+        </p>
+        <p class="branch-hours"
+           data-en="🕐 Mon–Sat: 09:00–20:00"
+           data-ru="🕐 Пн–Сб: 09:00–20:00"
+           data-uz="🕐 Du–Shan: 09:00–20:00">
+           🕐 Mon–Sat: 09:00–20:00
+        </p>
+        <a href="https://maps.app.goo.gl/2JKQ2w2uFbFQKEyS7" 
+           target="_blank" rel="noopener noreferrer"
+           data-en="Open in Maps"
+           data-ru="Открыть на карте"
+           data-uz="Xaritada ochish">Open in Maps</a>
+    </div>
+
+</div>
+</section>
+<!-- ----------------------------------------------- -->
+ <section id="reviews-section">
+    <h2 class="reviews-title"
+        data-en="What Our Students Say"
+        data-ru="Что говорят наши студенты"
+        data-uz="Talabalarimiz nima deydi">
+        What Our Students Say
+    </h2>
+
+    <div class="reviews-grid">
+
+        <article class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text"
+               data-en="Best language center in Andijan! My IELTS score improved from 5.5 to 7.0 in just 6 months."
+               data-ru="Лучший учебный центр в Андижане! Мой балл IELTS вырос с 5.5 до 7.0 всего за 6 месяцев."
+               data-uz="Andijonning eng yaxshi o'quv markazi! IELTS ballim 6 oyda 5.5 dan 7.0 ga ko'tarildi.">
+               Best language center in Andijan! My IELTS score improved from 5.5 to 7.0 in just 6 months.
+            </p>
+            <div class="review-author">
+                <span class="review-name">Aziz</span>
+                <span class="review-lang">🇬🇧 English</span>
+            </div>
+        </article>
+
+        <article class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text"
+               data-en="Amazing teachers! I passed TOPIK II after just one year of study here."
+               data-ru="Потрясающие учителя! Я сдала TOPIK II всего за год обучения здесь."
+               data-uz="Ajoyib o'qituvchilar! Bu yerda bir yil o'qigach TOPIK II ni topdim.">
+               Amazing teachers! I passed TOPIK II after just one year of study here.
+            </p>
+            <div class="review-author">
+                <span class="review-name">Malika</span>
+                <span class="review-lang">🇰🇷 Korean</span>
+            </div>
+        </article>
+
+        <article class="review-card">
+            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text"
+               data-en="HSK 4 passed! The speaking practice here is truly 80% of every lesson."
+               data-ru="Сдал HSK 4! Разговорная практика здесь — это реально 80% каждого урока."
+               data-uz="HSK 4 ni topdim! Bu yerdagi nutq amaliyoti har darsning 80 foizini tashkil etadi.">
+               HSK 4 passed! The speaking practice here is truly 80% of every lesson.
+            </p>
+            <div class="review-author">
+                <span class="review-name">Bobur</span>
+                <span class="review-lang">🇨🇳 Chinese</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+<section id="faq-section">
+    <h2 class="faq-title" 
+    data-en="Frequently Asked Questions"
+    data-ru="Часто задаваемые вопросы"
+    data-uz="Ko'p so'raladigan savollar">Frequently Asked Questions</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">
+            <span data-en="From what age do you accept students, and is prior knowledge required?"
+                      data-ru="Со скольки лет вы принимаете учеников и нужен ли начальный уровень?"
+                      data-uz="Necha yoshdan o'quvchi qabul qilasiz va boshlang'ich daraja kerakmi?">
+                    From what age do you accept students, and is prior knowledge required?
+                </span>
+                <span class="faq-icon">+</span>    
+            </button>
+            <div class="faq-answer">
+                <p data-en="We accept students from 7 years old. No prior knowledge required — we start from absolute zero. We have groups for children, teenagers, and adults."
+                   data-ru="Принимаем с 7 лет. Начальный уровень не нужен — начинаем с нуля. Есть группы для детей, подростков и взрослых."
+                   data-uz="Biz 7 yoshdan qabul qilamiz. Boshlang'ich daraja kerak emas — noldan boshlaymiz. Bolalar, o'smirlar va kattalar uchun guruhlar bor.">
+                    We accept students from 7 years old. No prior knowledge required — we start from absolute zero.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">
+                <span data-en="Do you offer a free trial lesson?"
+                      data-ru="Есть ли у вас бесплатный пробный урок?"
+                      data-uz="Bepul sinov darsi bormi?">
+                    Do you offer a free trial lesson?
+                </span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p data-en="Yes! The first trial lesson is completely free with no obligations. Come meet your teacher and see our class format."
+                   data-ru="Да! Первый пробный урок полностью бесплатный и ни к чему не обязывает. Приходите познакомиться с преподавателем и форматом занятий."
+                   data-uz="Ha! Birinchi sinov darsi mutlaqo bepul va hech qanday majburiyat yo'q. O'qituvchi va dars formatini ko'rish uchun keling.">
+                    Yes! The first trial lesson is completely free with no obligations.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span data-en="How many times a week are classes held and how long is one lesson?"
+                      data-ru="Сколько раз в неделю проходят занятия и сколько длится один урок?"
+                      data-uz="Haftada necha marta dars bo'ladi va bir dars qancha davom etadi?">
+                    How many times a week are classes held and how long is one lesson?
+                </span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p data-en="Classes are held 3 times a week, 1.5 hours each. We have morning and evening groups — choose the time that suits you."
+                   data-ru="Занятия проходят 3 раза в неделю по 1,5 часа. Есть утренние и вечерние группы — выбирайте удобное время."
+                   data-uz="Darslar haftada 3 marta, har biri 1.5 soat. Tong va kechki guruhlar bor — o'zingizga qulay vaqtni tanlang.">
+                    Classes are held 3 times a week, 1.5 hours each.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span data-en="What happens if a student gets sick or travels — is there a subscription freeze?"
+                      data-ru="Что происходит если ученик заболел или уехал — есть ли заморозка абонемента?"
+                      data-uz="O'quvchi kasal bo'lsa yoki yo'lga chiqsa nima bo'ladi — obunani muzlatish mumkinmi?">
+                    What happens if a student gets sick or travels — is there a subscription freeze?
+                </span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p data-en="Yes, subscription freezing is available for illness or travel. Simply inform the administrator — your lessons will be postponed and nothing will be lost."
+                   data-ru="Да, заморозка предусмотрена при болезни или отъезде. Просто сообщите администратору — уроки перенесут и ничего не сгорит."
+                   data-uz="Ha, kasallik yoki safar uchun obunani muzlatish mumkin. Faqat administratorga xabar bering — darslar ko'chiriladi, hech narsa yo'qolmaydi.">
+                    Yes, subscription freezing is available. Simply inform the administrator — nothing will be lost.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span data-en="How many students are in a group and are individual lessons available?"
+                      data-ru="Сколько человек в группах и есть ли индивидуальные уроки?"
+                      data-uz="Guruhlarda necha o'quvchi bo'ladi va individual darslar bormi?">
+                    How many students are in a group and are individual lessons available?
+                </span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p data-en="Groups have 6 to 12 students — ideal for active speaking practice. Individual lessons are also available upon request."
+                   data-ru="В группах 6–12 человек — оптимально для живой разговорной практики. Индивидуальные занятия также доступны по запросу."
+                   data-uz="Guruhlarda 6–12 o'quvchi — bu jonli nutq amaliyoti uchun ideal. So'rov bo'yicha individual darslar ham mavjud.">
+                    Groups have 6 to 12 students. Individual lessons are also available upon request.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span data-en="What are the payment options and methods?"
+                      data-ru="Каковы варианты и способы оплаты?"
+                      data-uz="To'lov variantlari va usullari qanday?">
+                    What are the payment options and methods?
+                </span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p data-en="Monthly fee is 350,000 sum. We accept cash and card. Payment is made at the beginning of each month."
+                   data-ru="Ежемесячная оплата — 350 000 сум. Принимаем наличные и оплату по карте. Оплата в начале каждого месяца."
+                   data-uz="Oylik to'lov — 350 000 so'm. Naqd pul va karta qabul qilinadi. To'lov har oyning boshida.">
+                    Monthly fee is 350,000 sum. We accept cash and card payments.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="cta-section">
+    <div class="cta-content">
+        <h2 class="cta-title"
+            data-en="Have Questions? Contact Us!"
+            data-ru="Остались вопросы? Свяжитесь с нами!"
+            data-uz="Savollar bormi? Biz bilan bog'laning!">
+            Have Questions? Contact Us!
+        </h2>
+        <form class="cta-form" id="cta-form">
+            <input type="text" id="form-name" placeholder="Your name" 
+                   data-en-placeholder="Your name"
+                   data-ru-placeholder="Ваше имя"
+                   data-uz-placeholder="Ismingiz"
+                   required>
+                   <div class="custom-select" id="custom-select">
+    <div class="select-selected" id="select-selected">
+        <span data-en="Choose a course" data-ru="Выберите курс" data-uz="Kursni tanlang">Choose a course</span>
+    </div>
+    <div class="select-dropdown" id="select-dropdown">
+    <div class="select-option" data-value="English"
+         data-en="🇬🇧 English — IELTS / Multilevel"
+         data-ru="🇬🇧 Английский — IELTS / Multilevel"
+         data-uz="🇬🇧 Ingliz tili — IELTS / Multilevel">🇬🇧 English — IELTS / Multilevel</div>
+    <div class="select-option" data-value="Korean"
+         data-en="🇰🇷 Korean — TOPIK I & II"
+         data-ru="🇰🇷 Корейский — TOPIK I & II"
+         data-uz="🇰🇷 Koreys tili — TOPIK I & II">🇰🇷 Korean — TOPIK I & II</div>
+    <div class="select-option" data-value="Chinese"
+         data-en="🇨🇳 Chinese — HSK I–VI"
+         data-ru="🇨🇳 Китайский — HSK I–VI"
+         data-uz="🇨🇳 Xitoy tili — HSK I–VI">🇨🇳 Chinese — HSK I–VI</div>
+    <div class="select-option" data-value="Russian"
+         data-en="🇷🇺 Russian — Free Expression"
+         data-ru="🇷🇺 Русский — Разговорный курс"
+         data-uz="🇷🇺 Rus tili — Soʻzlashuv kursi">🇷🇺 Russian — Free Expression</div>
+    <div class="select-option" data-value="Japanese"
+         data-en="🇯🇵 Japanese — JLPT"
+         data-ru="🇯🇵 Японский — JLPT"
+         data-uz="🇯🇵 Yapon tili — JLPT">🇯🇵 Japanese — JLPT</div>
+    <div class="select-option" data-value="German"
+         data-en="🇩🇪 German — GOETHE"
+         data-ru="🇩🇪 Немецкий — GOETHE"
+         data-uz="🇩🇪 Nemis tili — GOETHE">🇩🇪 German — GOETHE</div>
+</div>
+    <input type="hidden" id="form-course" required>
+</div>
+            <input type="tel" id="form-phone" placeholder="+998 (__) ___-__-__" required>
+            <button type="submit" class="cta-btn">
+                <span data-en="Send Application"
+                      data-ru="Отправить заявку"
+                      data-uz="Ariza yuborish">Send Application</span>
+            </button>
+        </form>
+        <p class="cta-success" id="cta-success" style="display:none;"
+           data-en="✅ Your application sent! We will call you back soon."
+           data-ru="✅ Заявка отправлена! Мы перезвоним вам в ближайшее время."
+           data-uz="✅ Ariza yuborildi! Tez orada siz bilan bog'lanamiz.">
+           ✅ Your application sent! We will call you back soon.
+        </p>
+    </div>
+</section>
+<footer id="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-col footer-brand">
+            <a href="#" class="footer-logo">
+                <img src="img5.jpg" alt="Sakura Logo">
+                <span>Sakura</span>
+            </a>
+            <p class="footer-desc"
+               data-en="Professional language courses in Andijan. English, Korean, Chinese, Russian, Japanese, German."
+               data-ru="Профессиональные языковые курсы в Андижане. Английский, корейский, китайский, русский, японский, немецкий."
+               data-uz="Andijon shahridagi professional til kurslari. Ingliz, koreys, xitoy, rus, yapon, nemis tillari.">
+               Professional language courses in Andijan.
+            </p>
+            <div class="social-icons">
+                <a href="https://t.me/sakura_edu" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/sakura_andijan" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:info.sakura@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col footer-nav">
+            <h4 data-en="Navigation" data-ru="Навигация" data-uz="Navigatsiya">Navigation</h4>
+            <ul>
+                <li><a href="#hero-section" data-en="Home" data-ru="Главная" data-uz="Bosh sahifa">Home</a></li>
+                <li><a href="#languages-section" data-en="Languages" data-ru="Языки" data-uz="Tillar">Languages</a></li>
+                <li><a href="#courses-section" data-en="Courses" data-ru="Курсы" data-uz="Kurslar">Courses</a></li>
+                <li><a href="#advantages-section" data-en="Why Us" data-ru="О нас" data-uz="Biz haqimizda">Why Us</a></li>
+                <li><a href="#branches-section" data-en="Branches" data-ru="Филиалы" data-uz="Filiallar">Branches</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Sakura. <span data-en="Created by" data-ru="Создано" data-uz="Yaratuvchi">Created by</span> <a href="https://t.me/KayumovTemur" target="_blank" rel="noopener noreferrer" class="footer-tim">Temur</a>. <span data-en="All rights reserved." data-ru="Все права защищены." data-uz="Barcha huquqlar himoyalangan.">All rights reserved.</span></p>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+<a href="tel:+998944166644" class="floating-call-btn" aria-label="Call us"><i class="fa-solid fa-phone"></i></a>
+</body>
+</html>

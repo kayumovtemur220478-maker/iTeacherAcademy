@@ -7,21 +7,21 @@
     width: 8px;
 }
 ::-webkit-scrollbar-track{
-    background-color: black;
+    background-color: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb{
-    background: #e60000;
+    background: #10b981;
     border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
+    background: #059669; 
 }
 ::selection{
-    background-color: #e60000;
+    background-color: #10b981;
     color: white;
 }
 ::-moz-selection{
-     background-color: #e60000;
+     background-color: #10b981;
     color: white;
 }
 html{
@@ -47,34 +47,33 @@ a{
      max-width: 100vw;
      overflow: hidden;
      z-index: 100;
-   background-color: rgba(0, 0, 0, 0.75); 
+   background-color:  rgba(255, 255, 255, 0.85); 
    backdrop-filter: blur(10px);
    -webkit-backdrop-filter: blur(10px);
     align-items: center;
     gap: 10px;
-    padding: 10px;
-    border-bottom: 3px solid orangered;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 .logo{
     width: max-content;
-    color: white;
-    font-family:  'Montserrat', sans-serif;
-    font-size: 35px;
+    font-family: 'montserrat', sans-serif;
+    font-size: 30px;
     letter-spacing: 2px;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     text-align: center;
     align-items: center;
     padding: 5px;
-    gap: 10px;
+    gap: 0px;
     text-decoration: none;
     user-select: none;
 }
-.logo img {
-  height: 50px;         
-    width: auto;           
-    border-radius: 50%;    
-    object-fit: cover;
+.logo-i, .logo-academy{
+    color:  #10b981;
+}
+.logo-teacher {
+    color: #111827;
 }
 .nav-menu {
     display: flex;
@@ -87,21 +86,21 @@ a{
     justify-content: center;
 }
 .nav-menu a{
-    color: white;
-    font-size: 20px;
-    font-family: sans-serif;
-    padding: 10px 20px;
+    color: #1f2937;
+    font-size: 18px;
+    font-family:'Montserrat', sans-serif;
+    padding: 8px 16px;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 .nav-menu a:hover {
-    color: #e60000; 
+    color: #10b981; 
 }
 .hamburger {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: #1f2937;
     font-size: 30px;
     cursor: pointer;
     padding: 5px 10px;
@@ -125,14 +124,20 @@ a{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
+.hero-info h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+}
 .online-dot{
     display: inline-block;
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.873);
+    background-color: #ffffff;
     animation: pulse 1s ease infinite;
-    margin: 5px;
+    margin-right: 12px;
 }
 @keyframes pulse{
     0%{
@@ -146,19 +151,21 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: orangered;
+    background-color: #10b981;
     color: white;
-    padding: 15px 35px;
-    font-family: sans-serif;
-    font-size: 20px;
+    padding: 16px 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
     border-radius: 8px;
-    margin-top: 50px;
-    transition: 0.5s;
+    margin-top: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
 }
 .hero-btn:hover{
-    transform: scale(1.07);
-   box-shadow: 0 10px 20px #fd6f6f;
-   background-color: rgb(250, 109, 58);
+    transform: translateY(-2px);
+   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+   background-color: #059669;
 }
 .hero-image img {
     width: 100%;
@@ -166,6 +173,7 @@ a{
     object-fit: cover;
     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
     user-select: none;
+    border-radius: 12px;
 }
 #stats-section {
     background-color: #f9f9f9;
@@ -188,21 +196,21 @@ a{
     padding: 30px;
     border-radius: 12px;
     background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     transition: 0.3s ease;
     cursor: default;
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(230, 0, 0, 0.3);
+    box-shadow: 0 12px 25px rgba(16, 185, 129, 0.15);
 }
 
 .stat-number {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: 600;
-    color: #e60000;
+    font-weight: 700;
+    color: #10b981;
     transition: 0.3s ease;
 }
 
@@ -213,18 +221,20 @@ a{
 
 .stat-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    color: #333;
+    color: #4b5563;
     margin-top: 8px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 .stat-icon{
+    display: inline-block;
     font-size: 36px;
-    color: #e60000;
+    color: #10b981;
     margin-bottom: 10px;
     opacity: 0.8;
+    transition: transform 0.3s ease;
 }
 .stat-card:hover .stat-icon {
     transform: scale(1.2);
@@ -576,22 +586,30 @@ a{
 
 #languages-section h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-    background: linear-gradient(45deg, #e60000, orangered);
-    -webkit-background-clip: text;
-    background-clip: text;  
-    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    color: #111827;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
-
+#languages-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 4px;
+    background-color: #10b981;
+    border-radius: 2px;
+}
 .lang-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     width: 100%;
-    min-width: 0;
 }
 
 .lang-card {
@@ -600,14 +618,14 @@ a{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px 20px;
-    border-radius: 12px;
-    border: 2px solid #f0f0f0;
+    padding: 35px 25px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
     background: white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
-    gap: 8px;
+    gap: 12px;
     min-width: 0;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -615,8 +633,8 @@ a{
 
 .lang-card:hover {
     transform: translateY(-8px);
-    border-color: #e60000;
-    box-shadow: 0 8px 25px rgba(230,0,0,0.2);
+    border-color: #10b981;
+    box-shadow: 0 8px 25px rgba(16,185,129,0.2);
 }
 
 .lang-card span {
@@ -624,7 +642,15 @@ a{
     display: inline-block;
     transition: 0.3s ease;
 }
-
+.lang-icon {
+    font-size: 46px;
+    color: #10b981; 
+    transition: transform 0.3s ease;
+    margin-bottom: 5px;
+}
+.lang-card:hover .lang-icon {
+    transform: scale(1.15) rotate(3deg);
+}
 .lang-card:hover span {
     transform: scale(1.2);
 }
@@ -632,8 +658,8 @@ a{
 .lang-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    font-weight: 600;
-    color: #1a1a1a;
+    font-weight: 700;
+    color: #1f2937;
     overflow-wrap: break-word;
     word-break: break-word;
     width: 100%;
@@ -642,10 +668,18 @@ a{
 .lang-card p {
     font-family: sans-serif;
     font-size: 14px;
-    color: #e60000;
+    color: #6b7280;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
+    background-color: #f3f4f6;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.lang-card:hover p {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    transition: 0.3s;
 }
 .branches-section{
     background-color: #f9f9f9;

@@ -16,6 +16,7 @@ document.querySelectorAll('.nav-menu a').forEach(function(link) {
         hamburger.textContent = '☰';
     });
 });
+
 function setLang(lang, btn) {
     document.querySelectorAll('[data-en]').forEach(function(el) {
         const translation = el.getAttribute('data-' + lang);
@@ -23,12 +24,14 @@ function setLang(lang, btn) {
             el.textContent = translation;
         }
     });
-document.querySelectorAll('[data-en-placeholder]').forEach(function(el) {
+
+    document.querySelectorAll('[data-en-placeholder]').forEach(function(el) {
         const translation = el.getAttribute('data-' + lang + '-placeholder');
         if (translation) {
             el.placeholder = translation;
         }
     });
+
     document.querySelectorAll('.lang-btn').forEach(function(b) {
         b.classList.remove('active');
     });
@@ -37,11 +40,11 @@ document.querySelectorAll('[data-en-placeholder]').forEach(function(el) {
         btn.classList.add('active');
     }
 
-    localStorage.setItem('sakura-lang', lang);
+    localStorage.setItem('iteacher-lang', lang);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('sakura-lang') || 'en';
+    const savedLang = localStorage.getItem('iteacher-lang') || 'ru';
     const savedBtn = document.querySelector('.lang-btn[data-lang="' + savedLang + '"]');
     setLang(savedLang, savedBtn);
 });
@@ -53,15 +56,19 @@ document.getElementById('cta-form').addEventListener('submit', async function(e)
     const phone = document.getElementById('form-phone').value.trim();
     const course = document.getElementById('form-course').value;
     const btn = document.querySelector('.cta-btn');
+    const currentLang = localStorage.getItem('iteacher-lang') || 'ru';
 
     if (!name || !phone) return;
-if (!course) {
-    document.getElementById('select-selected').style.border = '2px solid #e60000';
-    return;
-}
 
-    btn.textContent = '⏳ Sending...';
+    if (!course) {
+        document.getElementById('select-selected').style.borderColor = '#ef4444';
+        return;
+    }
+
+    const sendingTexts = { en: '⏳ Sending...', ru: '⏳ Отправка...', uz: '⏳ Yuborilmoqda...' };
+    btn.textContent = sendingTexts[currentLang] || sendingTexts.ru;
     btn.disabled = true;
+
     try {
         const response = await fetch('/api/send', {
             method: 'POST',
@@ -75,20 +82,23 @@ if (!course) {
             document.getElementById('cta-form').style.display = 'none';
             const success = document.getElementById('cta-success');
             success.style.display = 'block';
-            success.textContent = success.getAttribute('data-' + (localStorage.getItem('sakura-lang') || 'en'));
+            success.textContent = success.getAttribute('data-' + currentLang);
         } else {
-            btn.textContent = '❌ Error. Try again.';
+            const errorTexts = { en: '❌ Error. Try again.', ru: '❌ Ошибка. Повторите.', uz: '❌ Xatolik. Qaytadan urinish.' };
+            btn.textContent = errorTexts[currentLang] || errorTexts.ru;
             btn.disabled = false;
         }
     } catch (err) {
-        btn.textContent = '❌ Error. Try again.';
+        const errorTexts = { en: '❌ Error. Try again.', ru: '❌ Ошибка. Повторите.', uz: '❌ Xatolik. Qaytadan urinish.' };
+        btn.textContent = errorTexts[currentLang] || errorTexts.ru;
         btn.disabled = false;
     }
-    document.getElementById('select-selected').style.border = 'none';
+    
+    document.getElementById('select-selected').style.borderColor = '#e5e7eb';
 });
+
 const customSelect = document.getElementById('custom-select');
-const selectSelected = document.getElementById('select-selected').querySelector('span');
-const selectDropdown = document.getElementById('select-dropdown');
+const selectSelectedSpan = document.getElementById('select-selected').querySelector('span');
 const formCourse = document.getElementById('form-course');
 
 document.getElementById('custom-select').addEventListener('click', function(e) {
@@ -100,20 +110,26 @@ document.querySelectorAll('.select-option').forEach(function(option) {
     option.addEventListener('click', function() {
         document.querySelectorAll('.select-option').forEach(o => o.classList.remove('selected'));
         this.classList.add('selected');
-        selectSelected.textContent = this.textContent;
+        
+        selectSelectedSpan.setAttribute('data-en', this.getAttribute('data-en'));
+        selectSelectedSpan.setAttribute('data-ru', this.getAttribute('data-ru'));
+        selectSelectedSpan.setAttribute('data-uz', this.getAttribute('data-uz'));
+        
+        const currentLang = localStorage.getItem('iteacher-lang') || 'ru';
+        selectSelectedSpan.textContent = this.getAttribute('data-' + currentLang);
+        
         formCourse.value = this.getAttribute('data-value');
         customSelect.classList.remove('open');
     });
 });
 
 document.addEventListener('click', function() {
-    customSelect.classList.remove('open');
+    if(customSelect) customSelect.classList.remove('open');
 });
+
 document.querySelectorAll('.faq-question').forEach(function(question) {
     question.addEventListener('click', function() {
-
         const item = this.closest('.faq-item');
-
         const isOpen = item.classList.contains('open');
 
         document.querySelectorAll('.faq-item.open').forEach(function(openItem) {

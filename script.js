@@ -141,3 +141,58 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
         }
     });
 });
+const phoneInput = document.getElementById('form-phone');
+
+phoneInput.addEventListener('input', function (e) {
+    let input = e.target.value;
+    let numbers = input.replace(/\D/g, '');
+    
+    if (!numbers) {
+        e.target.value = '';
+        return;
+    }
+
+    if (numbers.startsWith('998')) {
+        numbers = numbers.substring(3);
+    }
+
+    numbers = numbers.substring(0, 9);
+
+    let formatted = '+998 ';
+
+    if (numbers.length > 0) {
+        formatted += '(' + numbers.substring(0, 2);
+    }
+    if (numbers.length >= 2) {
+        formatted += ') ';
+    }
+    if (numbers.length > 2) {
+        formatted += numbers.substring(2, 5);
+    }
+    if (numbers.length >= 5) {
+        formatted += '-';
+    }
+    if (numbers.length > 5) {
+        formatted += numbers.substring(5, 7);
+    }
+    if (numbers.length >= 7) {
+        formatted += '-';
+    }
+    if (numbers.length > 7) {
+        formatted += numbers.substring(7, 9);
+    }
+
+    e.target.value = formatted;
+});
+
+phoneInput.addEventListener('focus', function (e) {
+    if (!e.target.value) {
+        e.target.value = '+998 ';
+    }
+});
+
+phoneInput.addEventListener('blur', function (e) {
+    if (e.target.value === '+998 ') {
+        e.target.value = '';
+    }
+});

@@ -106,7 +106,7 @@ a{
     padding: 5px 10px;
     align-self: center;
 }
-#hero-section{
+#hero-section {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -115,7 +115,7 @@ a{
     margin-top: 85px;
     gap: 45px;
 }
-.hero-info{
+.hero-info {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -124,13 +124,19 @@ a{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
-.hero-info h1{
+.hero-info h1 {
     font-size: 40px;
     font-weight: 700;
     color: #111827;
     line-height: 1.2;
 }
-.online-dot{
+.hero-info p {
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.online-dot {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -139,33 +145,32 @@ a{
     animation: pulse 1s ease infinite;
     margin-right: 12px;
 }
-@keyframes pulse{
-    0%{
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); 
     }
-    100%{
-      box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);  
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);  
     }
 }
-.hero-btn{
+.hero-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #10b981;
+    background-color: #111827;
     color: white;
     padding: 16px 38px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 18px;
     border-radius: 8px;
-    margin-top: 30px;
+    margin-top: 10px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
 }
-.hero-btn:hover{
+.hero-btn:hover {
     transform: translateY(-2px);
-   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-   background-color: #059669;
+    background-color: #10b981;
 }
 .hero-image img {
     width: 100%;
@@ -175,6 +180,7 @@ a{
     user-select: none;
     border-radius: 12px;
 }
+ 
 #stats-section {
     background-color: #f9f9f9;
     padding: 40px;
@@ -241,77 +247,119 @@ a{
     display: inline-block;
     transition: 0.3s ease;
 }
-#courses-section{
+#courses-section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    background-color: #f9f9f9;
+    background-color: #f8fafc;
     color: black;
     overflow-x: hidden;
     width: 100%;
 }
-.section-title{
+
+.section-title {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 35px;
-    letter-spacing: 3px;
-    margin: 30px;
+    letter-spacing: 1px;
+    margin: 40px 30px 20px 30px;
     color: #111827;
-     overflow-wrap: break-word;
-     word-break: break-word;
-     max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
 }
-.courses-grid{
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: #10b981;
+    width: 100px;
+    border-radius: 2px;
+}
+
+.courses-grid {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 35px;
-    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 20px 30px 60px 30px;
     width: 100%;
     min-width: 0;
 }
-.course-card{
-    display: grid;
+
+.course-card {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 20px;
-    transition: 0.3s;
-    gap: 15px;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #10b981;
+    border-radius: 16px;
+    padding: 35px 25px 25px 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     min-width: 0;
     overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 2px 4px -1px rgba(15, 23, 42, 0.02);
 }
+
+.course-card:hover {
+    transform: translateY(-6px);   
+    border-color: #10b981;
+    box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.08), 0 10px 10px -5px rgba(16, 185, 129, 0.03);
+}
+
 .course-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    transition: 0.2s ease;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #0f172a;
+    transition: color 0.3s ease;
 }
-.course-card:hover h3{
+
+.course-card:hover h3 {
     color: #10b981;
 }
-.course-card:hover{
-     transform: translateY(-5px);   
-    border: 1px solid #10b981;
-    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
-}
-.course-desc{
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 400;
-    color: #555;
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
-.course-price{
-    font-size: 25px;
-    font-family: sans-serif;
+
+.course-desc {
+    font-size: 14.5px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    color: #475569;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.course-price {
+    width: 100%;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+    margin-top: auto;
+}
+
+.course-price p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
     color: #10b981;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.course-price span {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+    margin-left: 6px;
 }
 #advantages-section {
     display: grid;
@@ -389,7 +437,7 @@ a{
     width: 120px;
     height: 120px;
     background: linear-gradient(135deg, #10b981, #059669);
-    opacity: 0.2; /* Еле заметная нежная подложка */
+    opacity: 0.2; 
     transition: all 0.5s ease;
 }
 
@@ -539,7 +587,7 @@ a{
     font-weight: 600;
 }
  #site-footer {
-    background-color: #0f172a; /* Сделали фон глубоким темным Slate-900, чтобы он идеально сливался с формой! */
+    background-color: #0f172a; 
     color: #9ca3af;
     padding: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -572,7 +620,6 @@ a{
     text-decoration: none;
 }
 
-/* Стили для текстового логотипа внутри темного подвала */
 .footer-logo .logo-i, .footer-logo .logo-academy {
     color: #10b981;
     font-family: 'Montserrat', sans-serif;
@@ -581,7 +628,7 @@ a{
 }
 
 .footer-logo .logo-teacher {
-    color: #ffffff; /* Делаем слово Teacher белым для контраста */
+    color: #ffffff; 
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
     font-weight: 700;
@@ -596,7 +643,6 @@ a{
     margin-bottom: 20px;
 }
 
-/* Иконки соцсетей */
 .social-icons {
     display: flex;
     gap: 12px;
@@ -616,7 +662,6 @@ a{
     text-decoration: none;
 }
 
-/* Эффект ховера на соцсети: плавно взрываются зеленым неоном */
 .social-icons a:hover {
     background-color: #10b981;
     color: #ffffff;
@@ -642,15 +687,14 @@ a{
     text-decoration: none;
 }
 
-/* Ссылки навигации при наведении плавно зеленеют и сдвигаются вправо на 4 пикселя */
 .footer-nav ul li a:hover {
-    color: #10b981; /* Пофиксили красный на изумрудный! */
+    color: #10b981; 
     transform: translateX(4px);
-    padding-left: 0; /* Убрали старый padding-left, transform работает плавнее! */
+    padding-left: 0; 
 }
 
 .footer-bottom {
-    background: #0b0f19; /* Нижняя полоса с копирайтом стала еще глубже */
+    background: #0b0f19; 
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
     padding: 20px;
@@ -660,16 +704,16 @@ a{
     color: #6b7280;
 }
 
-/* --- ТВОЁ ИМЯ АВТОРА КРУПНЫМ ПЛАНОМ --- */
+
 .footer-tim {
-    color: #10b981 !important; /* Твое имя теперь горит сочным изумрудным! */
+    color: #10b981;
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-tim:hover {
-    color: #059669 !important; /* При наведении имя красиво темнеет */
+    color: #059669; 
     text-decoration: underline;
 }
 #languages-section {
@@ -1325,77 +1369,92 @@ a{
         overflow-x: hidden;
         scroll-padding-top: 120px;
     }
-    
-    .site-header {
-        display: grid;
+     .site-header {
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         width: 100%;
         max-width: 100vw;
-        overflow: hidden;
         z-index: 100;
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        grid-template-columns: 1fr auto auto;
-        grid-template-rows: auto;
-        padding: 10px;
-        border-bottom: none;
+        padding: 12px 15px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+        box-sizing: border-box;
+        transition: all 0.3s ease; 
+    }
+
+    .logo {
+        font-size: 19px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        flex-shrink: 1;
+        min-width: 0;
+        margin-right: auto;
+    }
+
+    .lang-toggle {
+        margin-right: 15px;
+        flex-shrink: 0;
     }
 
     .hamburger {
         display: flex;
-        min-width: 36px;
-        flex-shrink: 0;
+        background: none;
+        border: none;
+        font-size: 24px;
         color: #1f2937;
+        cursor: pointer;
+        padding: 4px;
+        flex-shrink: 0;
     }
 
     .nav-menu {
         display: none;
         flex-direction: column;
-        order: 0;
-        flex: none;
+        width: 100%;
         gap: 5px;
-        padding: 10px 0;
+        padding: 0;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: transparent;
+        position: static !important; 
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
     }
 
     .nav-menu.open {
         display: flex;
-        grid-column: 1 / -1;
+        padding: 15px 0 10px 0; 
     }
 
     .nav-menu a {
         font-size: 16px;
-        padding: 10px 20px;
+        padding: 12px 20px;
         width: 100%;
         text-align: center;
         border-radius: 8px;
         color: #1f2937;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        box-sizing: border-box;
+        transition: all 0.2s ease;
     }
-    
     
     .nav-menu a:hover {
+        background-color: #f0fdf4; 
         color: #10b981;
     }
-
-    .logo {
-        font-size: 25px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        text-align: center;
-        align-items: center;
-        padding: 5px;
-        gap: 10px;
-        margin-left: 0px;
-        flex-shrink: 1;
-        min-width: 0;
-    }
-
     #hero-section {
         display: grid;
         grid-template-rows: 1fr;

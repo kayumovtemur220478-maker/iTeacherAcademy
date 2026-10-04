@@ -7,17 +7,23 @@
     <meta name="description" content="iTeacher Academy — Andijonda ingliz tili (IELTS), rus tili, matematika va IT bo'yicha professional kurslar. / профессиональные курсы английского (IELTS), русского языка, математики и IT в Андижане.">
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#10b981">
     <meta name="robots" content="index, follow">
    <meta name="keywords" content="iTeacher Academy, iTeacher Andijon, iTeacher Андижан, iteacher o'quv markazi, o'quv markaz Andijon, учебный центр Андижан, курсы английского Андижан, ingliz tili kurslari Andijon, IELTS Andijon, rus tili kursi, курсы русского языка Андижан, matematika kursi, курсы математики Андижан, kompyuter savodxonligi, IT курсы Андижан">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="iTeacher Academy Andijan">
-    <meta property="og:description" content="Курсы английского, корейского, китайского в Андижане. 3 филиала.">
+    <meta property="og:locale" content="uz_UZ">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:site_name" content="iTeacher Academy">
+    <meta property="og:title" content="iTeacher Academy — Andijondagi o'quv markazi">
+    <meta property="og:description" content="Ingliz tili (IELTS), rus tili, matematika va IT. Birinchi sinov darsi bepul! / Английский, русский, математика и IT. Первый урок бесплатно.">
     <meta property="og:url" content="https://i-teacher-academy.vercel.app">
-    <meta property="og:image" content="https://sakura-temur4.vercel.app/favicon.ico">
+    <meta property="og:image" content="https://i-teacher-academy.vercel.app/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <header class="site-header">
@@ -39,7 +45,10 @@
        data-en="Why Us" data-ru="О нас" data-uz="Biz haqimizda">Why Us</a>
     <a href="#site-footer" 
        data-en="Contacts" data-ru="Контакты" data-uz="Aloqa">Contacts</a>
-</nav>
+           <a href="#cta-section" class="nav-cta"
+       data-en="Book a Free Lesson" data-ru="Записаться на урок" data-uz="Darsga yozilish">Book a Free Lesson</a>
+
+</nav> 
 </header>
   <section id="hero-section">
     <div class="hero-info">
@@ -53,13 +62,19 @@
            data-uz="Andijonda ingliz tili (IELTS), rus tili, matematika, kompyuter savodxonligi va sun'iy intellekt (AI) bo'yicha professional kurslar.">
             Professional courses for English (IELTS), Russian, Mathematics, Computer Literacy, and Artificial Intelligence (AI) in Andijan.
         </p>
+        <div class="hero-buttons-group">
+             <a href="#cta-section" class="hero-btn btn-primary">
+        <span data-en="Book a Free Lesson" data-ru="Записаться на урок" data-uz="Darsga yozilish">Записаться на урок</span>
+        <i class="fa-solid fa-arrow-down hero-arrow-icon"></i>
+    </a>
+
         <a href="https://t.me/KayumovTemur?text=Hello!%20I%20want%20to%20book%20a%20free%20lesson." 
-           class="hero-btn" target="_blank" rel="noopener noreferrer">
+           class="hero-btn btn-secondary" target="_blank" rel="noopener noreferrer">
             <span class="online-dot"></span>
             <span data-en="Book a Free Lesson"
                   data-ru="Записаться бесплатно"
                   data-uz="Bepul darsga yozilish">Book a Free Lesson</span>
-        </a>
+        </a> </div>
     </div>
     <div class="hero-image">
         <img src="pexels-mikhail-nilov-9300726.jpg" alt="iTeacher Students">
@@ -207,14 +222,14 @@
                 <div class="green-shape shape-cube"></div> 
                 <i class="fa-solid fa-laptop-code adv-main-icon"></i>
             </div>
-            <h3 class="adv-title" 
-                data-en="Modern IT & AI🤖" 
-                data-ru="Современные IT и AI🤖" 
-                data-uz="Zamonaviy IT va AI🤖">Modern IT & AI🤖</h3>
+            <h3 class="adv-title"
+    data-en="Modern IT & AI"
+    data-ru="Современные IT и AI"
+    data-uz="Zamonaviy IT va AI">Modern IT & AI</h3>
             <p class="adv-desc"
                data-en="We teach computer literacy and AI tools. Get ready for the high-tech future with us!"
                data-ru="Обучаем компьютерной грамотности и работе с искусственным интеллектом. Готовьтесь к технологичному будущему вместе с нами!"
-               data-uz="Kompyuter savodxonligi va sun'iy intellekt bilan ishlashni o'rgatamiz. Biz bilan texnologik kelajakka tayyorlaning!">Modern IT & AI🤖</p>
+             data-uz="Kompyuter savodxonligi va sun'iy intellekt bilan ishlashni o'rgatamiz. Biz bilan texnologik kelajakka tayyorlaning!">We teach computer literacy and AI tools. Get ready for the high-tech future with us!</p>
         </article>
 
         <article class="adv-card">
@@ -222,14 +237,14 @@
                 <div class="green-shape shape-sphere"></div>
                 <i class="fa-solid fa-chart-pie adv-main-icon"></i>
             </div>
-            <h3 class="adv-title" 
-                data-en="Progress 360📊" 
-                data-ru="Контроль Progress 360📊" 
-                data-uz="Progress 360 nazorati📊">Progress 360📊</h3>
+            <h3 class="adv-title"
+    data-en="Progress 360"
+    data-ru="Контроль Progress 360"
+    data-uz="Progress 360 nazorati">Progress 360</h3>
             <p class="adv-desc"
                data-en="Track attendance, homework, and test results in real-time through an interactive platform."
                data-ru="Следите за посещаемостью, домашними заданиями и оценками в реальном времени через удобную платформу."
-               data-uz="Interaktiv platforma orqali davomomat, uy vazifalari va baholarni real vaqtda kuzatib boring!">Progress 360📊</p>
+               data-uz="Interaktiv platforma orqali davomomat, uy vazifalari va baholarni real vaqtda kuzatib boring!">Track attendance, homework, and test results in real-time through an interactive platform.</p>
         </article>
 
         <article class="adv-card">
@@ -237,10 +252,10 @@
                 <div class="green-shape shape-cone"></div>
                 <i class="fa-solid fa-comments adv-main-icon"></i>
             </div>
-            <h3 class="adv-title" 
-                data-en="80% Speaking🗣️" 
-                data-ru="80% Разговорной практики🗣️" 
-                data-uz="80% Soʻzlashuv amaliyoti🗣️">80% Speaking🗣️</h3>
+            <h3 class="adv-title"
+    data-en="80% Speaking"
+    data-ru="80% Разговорной практики"
+    data-uz="80% Soʻzlashuv amaliyoti">80% Speaking</h3>
             <p class="adv-desc"
                data-en="No boring grammar drilling from old textbooks. You start talking from the very first minute of the lesson."
                data-ru="Никакой скучной зубрёжки грамматики по старым учебникам. Вы начинаете говорить с самой первой минуты урока!"
@@ -299,7 +314,9 @@
     <div class="reviews-grid">
 
         <article class="review-card">
-            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            <div class="review-stars">
+    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
             <p class="review-text"
                data-en="Best learning center in Andijan! My IELTS score improved from 5.5 to 7.0 in just 6 months."
                data-ru="Лучший учебный центр в Андижане! Мой балл IELTS вырос с 5.5 до 7.0 всего за 6 месяцев."
@@ -313,7 +330,9 @@
         </article>
 
         <article class="review-card">
-            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+           <div class="review-stars">
+    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
             <p class="review-text"
                data-en="Excellent computer literacy course! I learned basic coding and how to use AI tools for my studies."
                data-ru="Отличный курс компьютерной грамотности! Научился базовому кодингу и работе с ИИ-инструментами для учебы."
@@ -327,7 +346,9 @@
         </article>
 
         <article class="review-card">
-            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+           <div class="review-stars">
+    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
             <p class="review-text"
                data-en="Amazing mathematics teachers. They explained difficult topics so simply that I passed my school exams with A+!"
                data-ru="Потрясающие преподаватели математики. Объяснили сложные темы настолько просто, что я сдал школьные экзамены на отлично!"

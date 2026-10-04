@@ -56,18 +56,36 @@ document.getElementById('cta-form').addEventListener('submit', async function(e)
     const phone = document.getElementById('form-phone').value.trim();
     const course = document.getElementById('form-course').value;
     const btn = document.querySelector('.cta-btn');
+    const btnLabel = btn.querySelector('span');
     const currentLang = localStorage.getItem('iteacher-lang') || 'ru';
 
     if (!name || !phone) return;
 
+    // В номере должно быть 12 цифр: 998 + 9 цифр
+    if (phone.replace(/\D/g, '').length !== 12) {
+        document.getElementById('form-phone').classList.add('error');
+        return;
+    }
+
     if (!course) {
-        document.getElementById('select-selected').style.borderColor = '#ef4444';
+        document.getElementById('select-selected').classList.add('error');
         return;
     }
 
     const sendingTexts = { en: '⏳ Sending...', ru: '⏳ Отправка...', uz: '⏳ Yuborilmoqda...' };
-    btn.textContent = sendingTexts[currentLang] || sendingTexts.ru;
+    const errorTexts = { en: '❌ Error. Try again.', ru: '❌ Ошибка. Повторите.', uz: '❌ Xatolik. Qaytadan urinish.' };
+
+    btnLabel.textContent = sendingTexts[currentLang] || sendingTexts.ru;
     btn.disabled = true;
+
+    function showError() {
+        btnLabel.textContent = errorTexts[currentLang] || errorTexts.ru;
+        setTimeout(function() {
+            const lang = localStorage.getItem('iteacher-lang') || 'ru';
+            btnLabel.textContent = btnLabel.getAttribute('data-' + lang);
+            btn.disabled = false;
+        }, 3000);
+    }
 
     try {
         const response = await fetch('/api/send', {
@@ -84,17 +102,11 @@ document.getElementById('cta-form').addEventListener('submit', async function(e)
             success.style.display = 'block';
             success.textContent = success.getAttribute('data-' + currentLang);
         } else {
-            const errorTexts = { en: '❌ Error. Try again.', ru: '❌ Ошибка. Повторите.', uz: '❌ Xatolik. Qaytadan urinish.' };
-            btn.textContent = errorTexts[currentLang] || errorTexts.ru;
-            btn.disabled = false;
+            showError();
         }
     } catch (err) {
-        const errorTexts = { en: '❌ Error. Try again.', ru: '❌ Ошибка. Повторите.', uz: '❌ Xatolik. Qaytadan urinish.' };
-        btn.textContent = errorTexts[currentLang] || errorTexts.ru;
-        btn.disabled = false;
+        showError();
     }
-    
-    document.getElementById('select-selected').style.borderColor = '#e5e7eb';
 });
 
 const customSelect = document.getElementById('custom-select');
@@ -107,7 +119,9 @@ document.getElementById('custom-select').addEventListener('click', function(e) {
 });
 
 document.querySelectorAll('.select-option').forEach(function(option) {
-    option.addEventListener('click', function() {
+    option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        document.getElementById('select-selected').classList.remove('error');
         document.querySelectorAll('.select-option').forEach(o => o.classList.remove('selected'));
         this.classList.add('selected');
         
@@ -142,13 +156,16 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     });
 });
 const phoneInput = document.getElementById('form-phone');
+let prevDigitsCount = 0;
 
 phoneInput.addEventListener('input', function (e) {
-    let input = e.target.value;
-    let numbers = input.replace(/\D/g, '');
-    
+    e.target.classList.remove('error');
+
+    let numbers = e.target.value.replace(/\D/g, '');
+
     if (!numbers) {
         e.target.value = '';
+        prevDigitsCount = 0;
         return;
     }
 
@@ -157,6 +174,16 @@ phoneInput.addEventListener('input', function (e) {
     }
 
     numbers = numbers.substring(0, 9);
+
+    // Backspace убрал только разделитель, а цифры остались:
+    // тогда удаляем ещё и последнюю цифру
+    if (e.inputType === 'deleteContentBackward' &&
+        numbers.length > 0 &&
+        numbers.length === prevDigitsCount) {
+        numbers = numbers.slice(0, -1);
+    }
+
+    prevDigitsCount = numbers.length;
 
     let formatted = '+998 ';
 
@@ -196,3 +223,4 @@ phoneInput.addEventListener('blur', function (e) {
         e.target.value = '';
     }
 });
+

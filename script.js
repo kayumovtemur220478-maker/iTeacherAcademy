@@ -61,7 +61,6 @@ document.getElementById('cta-form').addEventListener('submit', async function(e)
 
     if (!name || !phone) return;
 
-    // В номере должно быть 12 цифр: 998 + 9 цифр
     if (phone.replace(/\D/g, '').length !== 12) {
         document.getElementById('form-phone').classList.add('error');
         return;
@@ -175,8 +174,6 @@ phoneInput.addEventListener('input', function (e) {
 
     numbers = numbers.substring(0, 9);
 
-    // Backspace убрал только разделитель, а цифры остались:
-    // тогда удаляем ещё и последнюю цифру
     if (e.inputType === 'deleteContentBackward' &&
         numbers.length > 0 &&
         numbers.length === prevDigitsCount) {
@@ -224,3 +221,58 @@ phoneInput.addEventListener('blur', function (e) {
     }
 });
 
+const asciiCow = `
+ -------------------
+ < Happy Hacking! -stsw >
+ -------------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||
+`;
+
+
+console.log(
+  `%c${asciiCow}`, 
+  "color: #22c55e; font-family: monospace; font-weight: bold; line-height: 1.2;"
+);
+const branchButtons = document.querySelectorAll('.branch-nav-btn');
+const branchContents = document.querySelectorAll('.branch-content');
+const branchIframe = document.getElementById('branch-iframe');
+
+const mapSources = {
+    'branch-yangi-a': 'https://google.com',
+    'branch-yangi-b': 'https://google.com',
+    'branch-biz-center': 'https://google.com',
+    'branch-severniy': 'https://google.com',
+    'branch-klara': 'https://google.com',
+    'branch-eski': 'https://google.com'
+};
+
+branchButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        branchButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const targetId = button.getAttribute('data-target');
+
+        branchContents.forEach(content => content.classList.remove('active'));
+        document.getElementById(targetId).classList.add('active');
+
+        if (mapSources[targetId]) {
+            branchIframe.src = mapSources[targetId];
+        }
+    });
+});
+const spider = document.querySelector('.footer-spider');
+if (spider) {
+  document.addEventListener('mousemove', (e) => {
+    const r = spider.getBoundingClientRect();
+    const dx = e.clientX - (r.left + r.width / 2);
+    const dy = e.clientY - (r.top + r.height / 2);
+    const d = Math.hypot(dx, dy) || 1;
+    spider.style.setProperty('--ex', (dx / d) * 1.5 + 'px');
+    spider.style.setProperty('--ey', (dy / d) * 1.5 + 'px');
+  });
+}

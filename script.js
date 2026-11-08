@@ -301,3 +301,4 @@ document.querySelectorAll('.vacancy-card-header').forEach(function(header) {
         this.closest('.vacancy-card').classList.toggle('open');
     });
 });
+console.log("Чанганны 🦫🦔")
